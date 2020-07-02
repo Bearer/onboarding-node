@@ -4,6 +4,7 @@ This sample application allows you to try out [Bearer](https://bearer.sh) before
 
 - An account on Bearer ([Sign up here](http://app.bearer.sh/signup))
 - Your Bearer App Key, found [here in the settings](https://app.bearer.sh/settings/general).
+- Node.js v10+
 
 ## Installation
 
