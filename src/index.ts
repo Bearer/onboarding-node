@@ -2,12 +2,14 @@ import axios from 'axios'
 
 import Bearer from '@bearer/node-agent'
 import { ConfigOptions } from '@bearer/node-agent/lib/config'
+import Dotenv from 'dotenv'
 
-const { BEARER_APP_KEY } = process.env
+Dotenv.config()
+const { BEARER_SECRET_KEY } = process.env
 
 const body = async () => {
   await Bearer.init({
-    secretKey: BEARER_APP_KEY,
+    secretKey: BEARER_SECRET_KEY,
   } as ConfigOptions)
 
   // Postman-Echo

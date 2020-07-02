@@ -9,14 +9,10 @@ yarn
 ## Configuration
 
 ```bash
-cp .envrc{.example,}
+cp .env{.example,}
 ```
 
-Replace `BEARER_APP_KEY` with your own Application Key
-
-```bash
-direnv allow
-```
+Replace `BEARER_SECRET_KEY` with your own Application Key
 
 ## Running
 
