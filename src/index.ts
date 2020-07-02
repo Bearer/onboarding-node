@@ -5,11 +5,12 @@ import { ConfigOptions } from '@bearer/node-agent/lib/config'
 import Dotenv from 'dotenv'
 
 Dotenv.config()
-const { BEARER_SECRET_KEY } = process.env
+const { BEARER_SECRET_KEY, NODE_ENV } = process.env
 
 const body = async () => {
   await Bearer.init({
     secretKey: BEARER_SECRET_KEY,
+    environment: NODE_ENV
   } as ConfigOptions)
 
   // Postman-Echo
