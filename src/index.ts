@@ -1,6 +1,5 @@
 import axios from "axios"
 
-import { ConfigOptions } from "@bearer/node-agent/lib/config"
 import Dotenv from "dotenv"
 
 Dotenv.config()
@@ -10,9 +9,7 @@ import Bearer from "@bearer/node-agent"
 const { BEARER_SECRET_KEY } = process.env
 
 const body = async () => {
-  await Bearer.init({
-    secretKey: BEARER_SECRET_KEY,
-  } as ConfigOptions)
+  await Bearer.init({ secretKey: BEARER_SECRET_KEY })
 
   console.log("-- Waiting for initialization --")
   await sleep(10000)
