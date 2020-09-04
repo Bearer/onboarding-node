@@ -11,9 +11,6 @@ const { BEARER_SECRET_KEY } = process.env
 const body = async () => {
   await Bearer.init({ secretKey: BEARER_SECRET_KEY })
 
-  console.log("-- Waiting for initialization --")
-  await sleep(10000)
-
   // Postman-Echo
   console.log("-- Sending API Calls to Postman-echo --")
   try {
@@ -84,7 +81,5 @@ const body = async () => {
     await axios.get("https://foo.bar/status/200")
   } catch {}
 }
-
-const sleep = (msec: number) => new Promise(resolve => { setTimeout(resolve, msec) })
 
 body()
