@@ -7,7 +7,7 @@
     "start": "ts-node ./src/index.ts"
   },
   "dependencies": {
-    "@bearer/node-agent": "^3.0",
+    "@bearer/node-agent": "^3.2.6",
     "axios": "^0.19.0",
     "dotenv": "^8.2.0"
   },
